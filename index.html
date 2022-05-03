@@ -90,16 +90,18 @@
     <!-- Code -->
     <div class="docs-section" id="code">
       <h6 class="docs-header">Installation</h6>
-      <p>To run our Docker images, simply start the image the following way.</p>
+      <p>To run our Docker images, simply start the image the following way:</p>
       <div class="docs-example">
       </div>
 
       <pre class="code-example"><code class="code-example-body prettyprint"><pre>
-docker run -it --rm -p 7999:8888 larsgebraad/hmclab:latest # python version
+docker run -it --rm -p 7999:8888 larsgebraad/hmclab:latest
 </pre></code>
       </pre>
       <p>This starts a Jupyter notebook server on your local port 7999. In your webbrowser
-        of choice, navigate to <code>localhost:7999</code></p>
+        of choice, navigate to <code>localhost:7999</code>. This notebook server
+        provides both Julia and Python notebooks on Geophysical inversion, and allows
+        you to develop your own notebooks without intalling any separate components.</p>
       <p>To install the language specific versions of HMC Lab directly on your system,
         see the appropriate installation pages:
       </p>
