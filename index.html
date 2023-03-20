@@ -41,12 +41,16 @@
           </div>
           </br>
           <div class="row">
-            <div class="six columns">Andrea Zunino</div>
-            <div class="six columns">Lars Gebraad</div>
+            <div class="twelve columns"><b>Andrea Zunino</b><sup>1</sup>, <b>Lars Gebraad</b><sup>1</sup></div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">Alessandro Ghirotto<sup>2</sup>, Andreas Fichtner<sup>1</sup></div>
           </div>
           </br>
           <div class="row">
-            <div class="twelve columns">Andreas Fichtner</div>
+            <div class="twelve columns"><sup>1</sup>Department of Earth Sciences, ETH Zurich, Switzerland</div>
+            <div class="twelve columns"><sup>2</sup>Applied Geophysics Laboratory, DISTAV University of Genoa, Italy
+            </div>
           </div>
         </div>
         <div class="three columns value-prop"> </div>
@@ -54,24 +58,45 @@
 
       <div class="value-props row">
         <div class="four columns value-prop">
-          ArXiv Preprint</br>
-          (coming soon)
+          <a href="https://arxiv.org/abs/2303.10047">ArXiv Preprint</a></br>
         </div>
         <div class="four columns value-prop">
-          Julia package</br>
-          (coming soon)
+          <a href="https://juliageoph.gitlab.io/HMCLab.jl">Julia package</a></br>
         </div>
         <div class="four columns value-prop">
           <a href="https://python.hmclab.science">Python version</a></br>
-          <i>3.8+, Conda, Docker</i>
+          <i>3.9+ for Pip or Docker</i>
         </div>
       </div>
     </section>
 
     <div class="docs-section" id="intro">
-      <h6 class="docs-header">HMC Lab</h6>
+      <h6 class="docs-header">HMCLab</h6>
       <p>
-        You should use HMC Lab if you want to apply state-of-the-art Markov chain Monte
+        The use of the probabilistic approach to solve inverse problems is becoming more popular in the geophysical
+        community, thanks to its ability to address nonlinear forward problems and to provide uncertainty
+        quantification. However, such strategy is often tailored to specific applications and therefore there is a lack
+        of a common platform for solving a range of different geophysical inverse problems and showing potential and
+        pitfalls. We demonstrate a common framework to solve such inverse problems ranging from, e.g, earthquake source
+        location to potential field data inversion and seismic tomography. Within this approach, we can provide
+        probabilities related to certain properties or structures of the subsurface. Thanks to its ability to address
+        high-dimensional problems, the Hamiltonian Monte Carlo (HMC) algorithm has emerged as the state-of-the-art tool
+        for solving geophysical inverse problems within the probabilistic framework. HMC requires the computation of
+        gradients, which can be obtained by adjoint methods, making the solution of tomographic problems ultimately
+        feasible.
+      </p>
+      <p>
+        These results can be obtained with "HMCLab", a tool for solving a range of different geophysical
+        inverse problems using sampling methods, focusing in particular on the HMC algorithm. HMCLab consists of a set
+        of samplers and a set of geophysical forward problems. For each problem its misfit function and gradient
+        computation are provided and, in addition, a set of prior models can be combined to inject additional
+        information into the inverse problem. This allows users to experiment with probabilistic inverse problems and
+        also address real-world studies. We show how to solve a selected set of problems within this framework using
+        variants of the HMC algorithm and analyze the results. HMCLab is provided as an open source package written both
+        in Python and Julia, welcoming contributions from the community.
+      </p>
+      <p>
+        One should use HMCLab when wanting to apply state-of-the-art Markov chain Monte
         Carlo algorithms to (Geophysical) inverse problems, or try out some inverse
         problems in tomography that we ourselves set up.
       </p>
@@ -83,6 +108,7 @@
         problems, both regarding the physics itself, or in implementing sampling using
         one of HMC Lab's algorithms.
       </p>
+
     </div>
 
 
@@ -105,7 +131,7 @@ docker run -it --rm -p 7999:8888 larsgebraad/hmclab:latest
         see the appropriate installation pages:
       </p>
       <ul>
-        <li>Julia,</li>
+        <li><a href="https://juliageoph.gitlab.io/HMCLab.jl/dev/#Installation">Julia</a>,</li>
         <li><a href="https://python.hmclab.science/setup.html">Python</a>.</li>
       </ul>
     </div>
@@ -114,7 +140,7 @@ docker run -it --rm -p 7999:8888 larsgebraad/hmclab:latest
       <div class="value-props row">
         <div class="three columns value-prop"></div>
         <div class="six columns value-prop">
-          Copyright 2022, Andrea Zunino, Lars Gebraad, Andreas
+          Copyright 2022, Andrea Zunino, Lars Gebraad, Alessandro Ghirotto, Andreas
           Fichtner. Software distributed under the <a
             href="https://github.com/larsgeb/hmclab/blob/master/LICENSE">following license</a>.
         </div>
